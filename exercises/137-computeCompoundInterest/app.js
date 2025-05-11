@@ -1,5 +1,12 @@
 function computeCompoundInterest(principal, interestRate, compoundingFrequency, timeInYears) {
   // your code here
+  const amount = principal * Math.pow(
+    1 + interestRate / compoundingFrequency,
+    compoundingFrequency * timeInYears
+  );
+
+  // El interés generado es el monto menos el capital inicial
+  return amount - principal;
   
 }
 

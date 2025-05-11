@@ -19,6 +19,19 @@ let currentInventory = [
 
 function renderInventory(shoeList) {
     // your code here
+  const result = [];
+
+  for (let i = 0; i < shoeList.length; i++) {
+    const designer = shoeList[i];
+    for (let j = 0; j < designer.shoes.length; j++) {
+      const shoe = designer.shoes[j];
+      if (shoe.name.toLowerCase().includes('black')) {
+        result.push([designer.name, shoe.name, shoe.price]);
+      }
+    }
+  }
+
+  return result;
     
 }
 

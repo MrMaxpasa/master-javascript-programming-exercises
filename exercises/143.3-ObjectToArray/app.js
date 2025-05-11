@@ -1,5 +1,14 @@
 function convertObjectToList(obj) {
   // your code here
+  const list = [];
+
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      list.push([key, obj[key]]);
+    }
+  }
+
+  return list;
   
 }
 

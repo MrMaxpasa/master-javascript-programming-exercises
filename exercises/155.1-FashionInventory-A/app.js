@@ -1,3 +1,18 @@
+function renderInventory(inventory) {
+  const result = [];
+
+  for (let i = 0; i < inventory.length; i++) {
+    const designer = inventory[i];
+    for (let j = 0; j < designer.shoes.length; j++) {
+      const shoe = designer.shoes[j];
+      result.push([designer.name, shoe.name, shoe.price]);
+    }
+  }
+
+  return result;
+}
+
+// Ejemplo de uso:
 let currentInventory = [
   {
     name: 'Brunello Cucinelli',
@@ -17,11 +32,4 @@ let currentInventory = [
   }
 ];
 
-function renderInventory(inventory) {
-    // your code here
-    // hint: before you just dive into coding...
-    // it's a good idea to sketch out a skeleton like you've been seeing earlier in this module...
-    
-}
-
-console.log(renderInventory(currentInventory))
+console.log(renderInventory(currentInventory));

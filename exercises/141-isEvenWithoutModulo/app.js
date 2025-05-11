@@ -1,5 +1,7 @@
 function isEvenWithoutModulo(num) {
     // your code here
+    let integer = num | 0;
+    return (integer & 1) === 0;
     
 }
 

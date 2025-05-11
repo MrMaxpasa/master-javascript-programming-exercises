@@ -1,5 +1,15 @@
 function getSquaredElementsAtProperty(obj, key) {
     // your code here
+  if (!obj.hasOwnProperty(key)) {
+    return [];
+  }
+  let value = obj[key];
+  if (!Array.isArray(value)) {
+    return [];
+  }
+  return value.map(function(item) {
+    return item * item;
+  });
     
 }
 
